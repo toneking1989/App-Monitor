@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element attributes="email_client=true,hasLabels=true,hasWorkflow=true,live_feed=true" audit="true" extends="task" label="Incident" max_length="40" name="incident" sizeclass="59" text_index="true" type="collection">
+        <element label="MAS Reference" max_length="32" name="x_scafe_mas_mas_reference" reference="x_scafe_mas_application_status" reference_floats="true" type="reference"/>
+    </element>
+</database>

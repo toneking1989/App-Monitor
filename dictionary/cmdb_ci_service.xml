@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element attributes="hasLabels=true" audit="true" extends="cmdb_ci" label="Business Service" max_length="40" name="cmdb_ci_service" type="collection">
+        <element label="MAS" max_length="40" name="x_scafe_mas_mas" type="boolean"/>
+    </element>
+</database>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_definition">
+    <sys_ws_definition action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <base_uri>/api/x_scafe_mas/mas</base_uri>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_version>v1</default_version>
+        <doc_link/>
+        <enforce_acl/>
+        <is_versioned>true</is_versioned>
+        <name>Mas</name>
+        <namespace>x_scafe_mas</namespace>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <service_id>mas</service_id>
+        <short_description/>
+        <sys_class_name>sys_ws_definition</sys_class_name>
+        <sys_created_by>Antone_King</sys_created_by>
+        <sys_created_on>2016-11-16 22:08:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d8c3d0034f8ba6007849cb4e0210c720</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Mas</sys_name>
+        <sys_package display_value="">e317c4034f4ba6007849cb4e0210c74b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="MAS">e86d81da0fc23200459e943be1050e39</sys_scope>
+        <sys_update_name>sys_ws_definition_d8c3d0034f8ba6007849cb4e0210c720</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-04-12 21:33:58</sys_updated_on>
+    </sys_ws_definition>
+</record_update>

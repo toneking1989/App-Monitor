@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Application Status" max_length="40" name="x_scafe_mas_application_status" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Alert Type" max_length="40" name="alert_type" type="string">
+            <choice>
+                <element label="Ping Alert" sequence="0" value="Ping Alert"/>
+                <element label="RFM DB Inaccessible" sequence="1" value="RFM DB Inaccessible"/>
+            </choice>
+        </element>
+        <element label="Application" max_length="32" name="application" reference="cmdb_ci_service" reference_qual="x_scafe_mas_mas=true^EQ" reference_qual_condition="x_scafe_mas_mas=true^EQ" type="reference"/>
+        <element label="Description" max_length="4000" name="description" type="string"/>
+        <element label="From Date" max_length="40" name="from_date" type="glide_date_time"/>
+        <element label="Market" max_length="32" name="market" reference="cmn_location" type="reference"/>
+        <element default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Opened By" max_length="40" name="opened_by" type="string">
+            <choice>
+                <element label="New Relic" sequence="0" value="New Relic"/>
+                <element label="RFM" sequence="1" value="RFM"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Short Description" max_length="100" name="short_description" type="string"/>
+        <element choice="1" label="System Status" max_length="40" name="system_status" type="integer">
+            <choice>
+                <element label="Green" value="2"/>
+                <element label="Grey" value="1"/>
+                <element label="Red" value="4"/>
+                <element label="Yellow" value="3"/>
+            </choice>
+        </element>
+        <element label="To Date" max_length="40" name="to_date" type="glide_date_time"/>
+        <index name="index">
+            <element name="market"/>
+        </index>
+        <index name="index2">
+            <element name="application"/>
+        </index>
+    </element>
+</database>

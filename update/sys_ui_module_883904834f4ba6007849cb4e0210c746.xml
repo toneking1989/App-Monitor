@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="MAS">fbccc4074f4ba6007849cb4e0210c776</application>
+        <filter/>
+        <name>Application Status</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles/>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>Antone_King</sys_created_by>
+        <sys_created_on>2016-11-16 21:21:49</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>883904834f4ba6007849cb4e0210c746</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Application Status</sys_name>
+        <sys_package display_value="">e317c4034f4ba6007849cb4e0210c74b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="MAS">e86d81da0fc23200459e943be1050e39</sys_scope>
+        <sys_update_name>sys_ui_module_883904834f4ba6007849cb4e0210c746</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-04-12 21:33:56</sys_updated_on>
+        <table>x_scafe_mas_application_status</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+</record_update>

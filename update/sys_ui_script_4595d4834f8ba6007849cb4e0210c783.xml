@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <global>false</global>
+        <name>x_scafe_mas.aking_system_status_model</name>
+        <script><![CDATA[angular.module('mcdApp').service('SystemStatModel', function($http){
+	"use strict";
+	
+		this.initialize = function() {
+		this.endpoint = '/api/x_scafe_mas/v1/mas';
+		this.searchValue = '';
+		this.data = {records: [], total: 0};
+		this.getListData();
+		return this;
+	};
+	
+	this.getListData = function() {
+		var _this = this;
+		$http.get(_this.endpoint).then(function(response) {
+			
+			_this.data.records = response.data.result.records;
+			_this.data.total = response.data.result.total;
+				});
+	};
+	
+	
+});
+]]></script>
+        <script_name>aking_system_status_model</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>Antone_King</sys_created_by>
+        <sys_created_on>2016-11-16 22:16:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4595d4834f8ba6007849cb4e0210c783</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_scafe_mas.aking_system_status_model</sys_name>
+        <sys_package display_value="">e317c4034f4ba6007849cb4e0210c74b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="MAS">e86d81da0fc23200459e943be1050e39</sys_scope>
+        <sys_update_name>sys_ui_script_4595d4834f8ba6007849cb4e0210c783</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-04-12 21:33:55</sys_updated_on>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>

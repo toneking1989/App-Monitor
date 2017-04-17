@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>aking_RFM2</name>
+        <scoped_name>x_scafe_mas_aking_RFM2</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>Antone_King</sys_created_by>
+        <sys_created_on>2016-11-16 22:25:10</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>09971c074f8ba6007849cb4e0210c7cb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>aking_RFM2</sys_name>
+        <sys_package display_value="">e317c4034f4ba6007849cb4e0210c74b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="MAS">e86d81da0fc23200459e943be1050e39</sys_scope>
+        <sys_update_name>sys_ui_macro_09971c074f8ba6007849cb4e0210c7cb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-04-12 21:33:54</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<div class="uptime-graphs-section api-uptime-graph">
+	<div class="uptime-graph-header clearfix">
+		<span class="uptime-stat-name">RFM 2</span>
+	</div>
+		<div class="block-chart">
+		<div  ng-repeat="record in model.data.records | orderBy: 'from_date'" ng-class="{2:'bar', 3:'bar mid', 4: 'bar down'}[record.system_status]" title="System status from {{record.from_date}} to {{record.to_date}} in {{record.market}} message: {{record.description}}" ng-if="$index >= 0" ng-click="openStatus(record.sys_id)"></div>
+		
+		</div>
+
+</div>
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

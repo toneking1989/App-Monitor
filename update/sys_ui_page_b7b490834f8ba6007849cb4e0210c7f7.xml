@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_20227_mas_MAS_System_Status_Dashboard.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	
+<g2:evaluate var="jvar_stamp">
+    var gr = new GlideRecord('sys_ui_script');
+		gr.orderByDesc('sys_updated_on');
+		gr.query();
+		gr.next();
+		gr.getValue('sys_updated_on');
+</g2:evaluate>
+<g:evaluate>
+	var d = new Date();
+	var stringDate = d.toString();
+</g:evaluate>
+
+
+<g:requires name="x_scafe_mas.angularjs-1.4.9.min.jsdbx"/>
+<g:requires name="x_scafe_mas.aking_system_status.app.jsdbx" params="cache=$[jvar_stamp]"/>
+<g:requires name="x_scafe_mas.aking_system_status_model.jsdbx" params="cache=$[jvar_stamp]" />
+<g:requires name="x_scafe_mas.aking_system_status_ctrl.jsdbx" params="cache=$[jvar_stamp]" />
+<g:requires name="x_scafe_mas.aking_template_service.jsdbx" params="cache=$[javr_stamp]" />
+	
+<link href="c736dc834f8ba6007849cb4e0210c7ec.cssdbx" rel="stylesheet" type="text/css"></link>
+	
+	<div class="inner">
+		
+		<div class="header clearix">
+			<div class="heading">
+				<span>MAS system status</span>
+			</div>
+		</div>
+		<br></br>
+		
+		<div class="content">
+			<div class="white box">
+				<div class="largestatus">
+					<div class="title-wrapper">
+						<span class="title">All services are online. </span>
+						<label class="status-time">
+						<span class="current-time">As of ${stringDate}</span>
+						</label>
+
+					</div>
+				</div>
+			</div>
+			
+			<div class="statistics">
+				<div class="inner-gradient">
+				<div class="uptime-graphs box-inner">
+					<div ng-app="mcdApp">
+						<div ng-controller="SystemStatCtrl" data-ng-init="getTemplate()">
+							
+							<!-- include app templates below this line -->
+							<div ng-include="getTemplate('x_scafe_mas_aking_RFM2')" />
+
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+</j:jelly>]]></html>
+        <name>MAS_System_Status_Dashboard</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>Antone_King</sys_created_by>
+        <sys_created_on>2016-11-16 22:13:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b7b490834f8ba6007849cb4e0210c7f7</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>MAS_System_Status_Dashboard</sys_name>
+        <sys_package display_value="">e317c4034f4ba6007849cb4e0210c74b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="MAS">e86d81da0fc23200459e943be1050e39</sys_scope>
+        <sys_update_name>sys_ui_page_b7b490834f8ba6007849cb4e0210c7f7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-04-12 21:33:57</sys_updated_on>
+    </sys_ui_page>
+</record_update>
